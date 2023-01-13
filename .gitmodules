@@ -1,0 +1,6 @@
+[submodule "aws-s3-datasource"]
+	path = aws-s3-datasource
+	url = https://github.com/docu-vault/aws-s3-datasource.git
+[submodule "contracts"]
+	path = contracts
+	url = https://github.com/docu-vault/contracts.git
