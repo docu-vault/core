@@ -5,7 +5,7 @@ import {fail} from "assert";
 
 import { Container, Inject, Service } from 'typedi';
 
-import {ApplicationConfiguration} from './../src/configuration' ;
+import {ApplicationConfiguration} from '@docu-vault/contracts' ;
 const container = require('./app-init');
 const {Logger} = require('@docu-vault/logger');
 const logger = new Logger('vault tests');

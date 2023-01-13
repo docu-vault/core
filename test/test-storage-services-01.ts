@@ -7,8 +7,6 @@ import 'reflect-metadata';
 //import { Container, Inject, Service } from 'typedi';
 
 import container from './app-init' ;
-
-//import {StorageS3Repo}  from '../src-ts/storage/datasources/storage-s3';
 import {StorageService} from  '../src/storage-services'
 
 const {Logger} = require('@docu-vault/logger');

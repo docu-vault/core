@@ -1,7 +1,6 @@
 
 import {Storage} from '@docu-vault/contracts';
-import { StorageItem } from "@docu-vault/contracts";
-import {ApplicationConfiguration} from './configuration';
+import { StorageItem , ApplicationConfiguration} from "@docu-vault/contracts";
 
 import 'reflect-metadata';
 import { Container, Inject, Service } from 'typedi';

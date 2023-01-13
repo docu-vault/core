@@ -3,7 +3,7 @@ import { Logger } from '@docu-vault/logger';
 import 'reflect-metadata';
 import { Container, Service } from 'typedi';
 
-import {ApplicationConfiguration} from '../src/configuration';
+import {ApplicationConfiguration} from '@docu-vault/contracts';
 
 const logger = new Logger('TestConfig: ');
 

@@ -1,7 +1,7 @@
 
 import { Container} from 'typedi';
 import {S3Storage}  from '@docu-vault/aws-s3-datasource';
-import {ApplicationConfiguration} from '../src/configuration' ;
+import {ApplicationConfiguration} from '@docu-vault/contracts' ;
 import {TestConfig} from './vault-services';
 import {StorageService}  from './../src/storage-services'
 
