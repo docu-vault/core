@@ -1,0 +1,49 @@
+{
+    "name": "@docu-vault/core-services",
+    "description": "docudata storage functionality core business logic",
+    "version": "0.0.1",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "/dist"
+    ],
+    "scripts": {
+        "tsc": "tsc -p tsconfig.json",
+        "build": "npm install && npm run tsc",
+        "cleanup-s3": "aws s3 rm s3://dd-test-customer01-data --recursive",
+        "lint": "eslint  --config tslint.json 'src-ts/**/*.ts'",
+        "cleanup-local": "rm test/download/*.*   && rm test/download-02/*.*",
+        "cleanup": "npm run cleanup-local || npm run cleanup-s3",
+        "test-vault": "mocha -r ts-node/register -r source-map-support/register test/test-configuration.ts -timeout 5000",
+        "test-01": "npm run cleanup && mocha -r ts-node/register -r source-map-support/register test/test-storage-services-01.ts -timeout 5000",
+        "test-02": "npm run cleanup && mocha -r ts-node/register -r source-map-support/register test/test-storage-services-02.ts -timeout 5000"
+    },
+    "devDependencies": {
+        "@types/aws-lambda": "^8.10.75",
+        "@types/chai": "^4.3.4",
+        "@types/mocha": "^8.2.2",
+        "@types/node": "^14.18.22",
+        "aws-sdk": "^2.1176.0",
+        "axios": "^0.21.1",
+        "chai": "^4.3.4",
+        "ts-node": "^9.1.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/docu-vault/core.git"
+    },
+    "bugs": {
+        "url": "https://github.com/docu-vault/core/issues"
+    },
+    "homepage": "https://github.com/docu-vault/core#readme",
+    "dependencies": {
+        "@aws-sdk/client-s3": "^3.131.0",
+        "@docu-vault/api-handler": "^1.0.0",
+        "@docu-vault/aws-s3-datasource": "^0.0.4",
+        "@docu-vault/contracts": "^0.0.7",
+        "@docu-vault/logger": "^1.0.0",
+        "reflect-metadata": "^0.1.13",
+        "typedi": "^0.10.0",
+        "uuid": "^3.3.2"
+    }
+}
